@@ -46,15 +46,17 @@ export default function VideoModal() {
         className="relative w-full md:w-1/2 mx-auto cursor-pointer group"
       >
         <img
-          src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+          src={`https://img.youtube.com/vi/KLuTLF3x9sA/maxresdefault.jpg`}
           alt="Video thumbnail"
           className="rounded-xl w-full object-cover"
         />
+
+        {/* Play button centered over thumbnail */}
         <div className="absolute inset-0 flex items-center justify-center">
           <img
-            src="../../public/images/Play.png"
+            src="/images/Play.png"
             alt="Play"
-            className="w-16 h-16 transition-transform group-hover:scale-110"
+            className="w-16 h-16 transition-transform duration-200 ease-in-out group-hover:scale-110"
           />
         </div>
       </div>

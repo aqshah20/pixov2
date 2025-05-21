@@ -21,7 +21,7 @@ function HeroSection() {
         </button>
       </div>
       <div className="sm:flex hidden w-1/2 justify-center items-center">
-        <img src="../../public/images/LandingPageImage.png" alt="" />
+        <img src="/images/LandingPageImage.png" alt="" />
       </div>
     </div>
   );

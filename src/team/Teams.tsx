@@ -35,10 +35,10 @@ function Teams() {
           </div>
           <div className="flex gap-2">
             <img
-              src="../../public/images/User1.png"
+              src="/images/User1.png"
               className="h-[40px] rounded-full"
               alt=""
-            />
+            />  
             <div className="flex flex-col">
               <h6 className="text-sm text-gray-900">Jeewa markram</h6>
               <p className="text-xs text-gray-600">CEO</p>
@@ -48,7 +48,7 @@ function Teams() {
         <div className="max-w-full lg:w-1/2 relative overflow-visible flex justify-center">
           <div className="relative inline-block  z-10">
             <img
-              src="../../public/images/Team1.png"
+              src="/images/Team1.png"
               alt=""
               className="block relative z-20 w-full"
             />
@@ -61,7 +61,7 @@ function Teams() {
         <div className="max-w-full lg:w-1/2 relative overflow-visible flex justify-center">
           <div className="relative inline-block  z-10">
             <img
-              src="../../public/images/Team2.png"
+              src="/images/Team2.png"
               alt=""
               className="block relative z-20 w-full"
             />
@@ -94,7 +94,7 @@ function Teams() {
           </div>
           <div className="flex gap-2">
             <img
-              src="../../public/images/User2.png"
+              src="/images/User2.png"
               className="h-[40px] rounded-full"
               alt=""
             />
@@ -131,7 +131,7 @@ function Teams() {
           </div>
           <div className="flex gap-2">
             <img
-              src="../../public/images/User3.png"
+              src="/images/User3.png"
               className="h-[40px] rounded-full"
               alt=""
             />
@@ -144,7 +144,7 @@ function Teams() {
         <div className="max-w-full lg:w-1/2 relative overflow-visible flex justify-center">
           <div className="relative inline-block  z-10">
             <img
-              src="../../public/images/Team3.png"
+              src="/images/Team3.png"
               alt=""
               className="block relative z-20 w-full"
             />
