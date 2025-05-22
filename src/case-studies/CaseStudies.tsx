@@ -2,8 +2,8 @@ import { ChevronRight } from "lucide-react";
 
 function CaseStudies() {
   return (
-    <div className="bg-lightGray p-10">
-      <div className="mb-4 md:mb-20 w-full mt-20 flex justify-center relative">
+    <div className="bg-lightGray pb-10">
+      <div className="mb-4 md:mb-20 w-full flex justify-center relative">
         <div className="inline-flex relative gap-2 mt-16 flex-col items-center p-5">
           <span className="w-16 h-1 bg-gradient-225 absolute top-0 left-1/2 -translate-x-1/2"></span>
           <h4 className="text-2xl md:text-4xl">Our Recent</h4>
@@ -21,7 +21,7 @@ function CaseStudies() {
           className="h-52 hidden md:block absolute -top-28 z-40 right-52"
         />
       </div>
-      <div className="gap-5 md:px-20 space-y-10">
+      <div className="gap-5 px-10 md:px-20 space-y-10">
         {/* Card 1 — already responsive */}
         <div className="w-full flex flex-wrap bg-iceBlue rounded-xl border">
           <img

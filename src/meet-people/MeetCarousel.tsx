@@ -1,9 +1,18 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 export function MeetCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel();
+  const autoplay = Autoplay({ delay: 2000, stopOnInteraction: true });
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      align: "center",
+    },
+    [autoplay]
+  );
+
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
 

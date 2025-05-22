@@ -8,6 +8,11 @@ import Teams from "./team/Teams";
 import Services from "./services/Services";
 import { MeetCarousel } from "./meet-people/MeetCarousel";
 import { CustomerCarousel } from "./customers/CustomerCarousel";
+import { ResourcesCarousel } from "./resources/Resources";
+import HireCta from "./footer/HireCta";
+import DevelopmentAproach from "./development-aproach/DevelopmentAproach";
+import TechStack from "./tech-stack/TechStack";
+import Footer from "./footer/Footer";
 
 function App() {
   return (
@@ -21,6 +26,11 @@ function App() {
       <CustomerCarousel/>
       <CaseStudies/>
       <Teams/>
+      <DevelopmentAproach/>
+      <TechStack/>
+      <ResourcesCarousel/>
+      <HireCta/>
+      <Footer/>
     </>
   );
 }

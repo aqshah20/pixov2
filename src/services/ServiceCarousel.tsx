@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 const slides = [
   {
     title: "Web Design & Development",
@@ -31,13 +32,17 @@ const slides = [
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
   },
-]; 
+];
 
 export function ServiceCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "center",
-  });
+  const autoplay = Autoplay({ delay: 2000, stopOnInteraction: false });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "center",
+    },
+    [autoplay]
+  );
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
@@ -76,7 +81,11 @@ export function ServiceCarousel() {
                 <div className="border inline-block rounded-full border-purple p-2">
                   <img src="/images/Code.png" alt="" className="h-6" />
                 </div>
-                <h6 className={`${selectedIndex === index ? "text-gradient" : "text-gray-800"} text-xl font-semibold`}>
+                <h6
+                  className={`${
+                    selectedIndex === index ? "text-gradient" : "text-gray-800"
+                  } text-xl font-semibold`}
+                >
                   {slides[index].title}
                 </h6>
                 <p className="text-gray-700 text-sm">

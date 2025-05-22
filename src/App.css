@@ -8,7 +8,9 @@
 .service__slide {
   flex: 0 0 25%;
 }
-
+.resource__slide{
+  flex: 0 0 20%;
+}
 /* Medium screens: tablets */
 @media (max-width: 1024px) {
   .service__slide {
@@ -26,13 +28,44 @@
 /* Extra small screens: phones */
 @media (max-width: 480px) {
   .service__slide {
-    flex: 0 0 100%;
+    flex: 0 0 90%;
   }
 }
 
 .meet__slide{
   flex: 0 0 100%;
 }
+.customer__slide {
+  flex: 0 0 20%; /* Default: show 5 slides */
+}
+
+/* Medium screens: tablets */
+@media (max-width: 1024px) {
+  .customer__slide {
+    flex: 0 0 25%; /* 4 slides */
+  }
+}
+
+/* Small screens: large phones */
+@media (max-width: 768px) {
+  .customer__slide {
+    flex: 0 0 33.3333%; /* 3 slides */
+  }
+}
+
+/* Extra small screens: phones */
+@media (max-width: 480px) {
+  .customer__slide {
+    flex: 0 0 80%;
+  }
+  .resource__slide {
+    flex: 0 0 40%; /* 1.25 slides visible */
+  }
+  .meet__slide{
+    flex: 0 0 100%;
+  }
+}
+
 .embla__slide {
   min-width: 0;
 }
