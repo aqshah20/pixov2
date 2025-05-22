@@ -3,10 +3,26 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 
 export function CustomerCarousel() {
-  const [viewportRef1, emblaApi1] = useEmblaCarousel();
-  const [ emblaApi2] = useEmblaCarousel();
+  const [emblaRef, emblaApi] = useEmblaCarousel();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("init", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("init", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   const slides = [
     {
@@ -26,36 +42,9 @@ export function CustomerCarousel() {
     },
   ];
 
-  const syncScroll = useCallback(() => {
-    if (!emblaApi1 || !emblaApi2) return;
-    const index = emblaApi1.selectedScrollSnap();
-    emblaApi2.scrollTo(index, true);
-  }, [emblaApi1, emblaApi2]);
-
-  useEffect(() => {
-    if (!emblaApi1 || !emblaApi2) return;
-
-    emblaApi1.on("select", syncScroll);
-    emblaApi1.on("init", syncScroll);
-
-    setCanScrollPrev(emblaApi1.canScrollPrev());
-    setCanScrollNext(emblaApi1.canScrollNext());
-
-    emblaApi1.on("select", () => {
-      setCanScrollPrev(emblaApi1.canScrollPrev());
-      setCanScrollNext(emblaApi1.canScrollNext());
-    });
-
-    return () => {
-      emblaApi1.off("select", syncScroll);
-      emblaApi1.off("init", syncScroll);
-    };
-  }, [emblaApi1, emblaApi2, syncScroll]);
-
   return (
     <div className="embla mt-28">
-      {/* First Carousel */}
-      <div className="embla__viewport relative" ref={viewportRef1}>
+      <div className="embla__viewport relative" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (
             <div className="embla__slide meet__slide" key={index}>
@@ -72,11 +61,32 @@ export function CustomerCarousel() {
             </div>
           ))}
         </div>
-
+ 
+        {/* <div className="embla__container h-[300px] mb-14">
+          {slides.map((_, index) => (
+            <div className="embla__slide service__slide" key={index}>
+              <div
+                className={` p-4 flex flex-col gap-5 items-start justify-center min-h-[280px] transition-all duration-300 rounded-lg
+                 `}
+              >
+                <div className="border inline-block rounded-full border-purple p-2">
+                  <img src="/images/Code.png" alt="" className="h-6" />
+                </div>
+                <h6 className={`text-xl font-semibold`}>
+                  {slides[index].title}
+                </h6>
+                <p className="text-gray-700 text-sm">
+                  {slides[index].text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div> */}
+  
         {/* Navigation Buttons */}
         <div className="flex justify-end gap-3 -mt-20 mb-5 mx-10">
           <button
-            onClick={() => emblaApi1?.scrollPrev()}
+            onClick={() => emblaApi?.scrollPrev()}
             disabled={!canScrollPrev}
             className={`p-2 rounded-full z-50 absolute top-1/2 left-10 -translate-y-1/2 ${
               !canScrollPrev
@@ -91,7 +101,7 @@ export function CustomerCarousel() {
             />
           </button>
           <button
-            onClick={() => emblaApi1?.scrollNext()}
+            onClick={() => emblaApi?.scrollNext()}
             disabled={!canScrollNext}
             className={`p-2 rounded-full z-50 absolute top-1/2 right-10 -translate-y-1/2 ${
               !canScrollNext
@@ -107,23 +117,6 @@ export function CustomerCarousel() {
           </button>
         </div>
       </div>
-
-      {/* Second Carousel (Synced) */}
-      {/* <div className="embla__viewport mt-14" ref={viewportRef2}>
-        <div className="embla__container h-[300px]">
-          {slides.map((slide, index) => (
-            <div className="embla__slide service__slide" key={index}>
-              <div className="p-4 flex flex-col gap-5 items-start justify-center min-h-[280px] transition-all duration-300 rounded-lg">
-                <div className="border inline-block rounded-full border-purple p-2">
-                  <img src="/images/Code.png" alt="" className="h-6" />
-                </div>
-                <h6 className="text-xl font-semibold">{slide.title}</h6>
-                <p className="text-gray-700 text-sm">{slide.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
     </div>
   );
 }
