@@ -93,33 +93,51 @@ function TechStack() {
           through Alcaline works
         </h4>
       </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center lg:w-4/5">
+      {/* ✅ DESKTOP ONLY VERSION */}
+      <div className="hidden lg:flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center lg:items-start justify-center lg:w-[90%]">
           {/* Top Row */}
-          <div className="flex lg:px-10 w-[90%] flex-wrap justify-center lg:flex-nowrap gap-10 items-start">
-            {[1, 2, 3].map((num) => (
-              <div key={num} className="flex flex-col relative items-center">
-                <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full max-w-md">
-                  <h1 className="text-lg text-gray-900 font-bold">
-                    <span className="text-gradient">#{num}</span>{" "}
-                    {num === 1
-                      ? "Assemble the right team"
-                      : num === 2
-                      ? "Align on project goals"
-                      : "Deliver results"}
-                  </h1>
-                  <p className="text-gray-600 text-sm">
-                    {num === 1 &&
-                      "We handle all aspects of vetting and choosing the right team that you don't have the time, expertise, or desire to do."}
-                    {num === 2 &&
-                      "Clear communication and alignment on deliverables keeps projects on track and expectations realistic."}
-                    {num === 3 &&
-                      "The team executes and iterates quickly to deliver results that matter to your business."}
-                  </p>
-                </div>
-                <span className="mt-4 w-[2px] h-12 bg-gradient-225 hidden lg:block"></span>
+          <div className="flex lg:px-10 w-[90%] flex-wrap justify-center lg:flex-nowrap gap-10 items-center lg:items-start">
+            <div className="flex flex-col relative items-center">
+              <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full max-w-md">
+                <h1 className="text-lg text-gray-900 font-bold">
+                  <span className="text-gradient">#1</span> Assemble the right
+                  team
+                </h1>
+                <p className="text-gray-600 text-sm">
+                  We handle all aspects of vetting and choosing the right team
+                  that you don't have the time, expertise, or desire to do.
+                </p>
               </div>
-            ))}
+              <span className="mt-4 w-[2px] h-12 bg-gradient-225 hidden lg:block"></span>
+            </div>
+
+            <div className="flex flex-col relative items-center">
+              <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full max-w-md">
+                <h1 className="text-lg text-gray-900 font-bold">
+                  <span className="text-gradient">#3</span> Tech architecture
+                  goals
+                </h1>
+                <p className="text-gray-600 text-sm">
+                  We break monolithic apps into microservices. Decoupling the
+                  code allows teams to move faster and more independently
+                </p>
+              </div>
+              <span className="mt-4 w-[2px] h-12 bg-gradient-225 hidden lg:block"></span>
+            </div>
+
+            <div className="flex flex-col relative items-center">
+              <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full max-w-md">
+                <h1 className="text-lg text-gray-900 font-bold">
+                  <span className="text-gradient">#5</span> Code reviews
+                </h1>
+                <p className="text-gray-600 text-sm">
+                  Code reviews before release help detect issues like memory
+                  leaks, file leaks, performance signs, and general bad smells
+                </p>
+              </div>
+              <span className="mt-4 w-[2px] h-12 bg-gradient-225 hidden lg:block"></span>
+            </div>
           </div>
 
           {/* Horizontal Connector Line */}
@@ -133,33 +151,122 @@ function TechStack() {
           </span>
 
           {/* Bottom Row */}
-          <div className="flex flex-wrap lg:flex-nowrap justify-center lg:ml-10 lg:px-10 w-[90%] gap-10 items-start">
-            {[1, 2, 3].map((num) => (
-              <div key={num} className="flex flex-col relative items-center">
-                <span className="mb-4 w-[2px] h-12 bg-gradient-225 hidden lg:block"></span>
-                <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full max-w-md">
-                  <h1 className="text-lg text-gray-900 font-bold">
-                    <span className="text-gradient">#{num}</span>{" "}
-                    {num === 1
-                      ? "Assemble the right team"
-                      : num === 2
-                      ? "Align on project goals"
-                      : "Deliver results"}
-                  </h1>
-                  <p className="text-gray-600 text-sm">
-                    {num === 1 &&
-                      "We handle all aspects of vetting and choosing the right team that you don't have the time, expertise, or desire to do."}
-                    {num === 2 &&
-                      "Clear communication and alignment on deliverables keeps projects on track and expectations realistic."}
-                    {num === 3 &&
-                      "The team executes and iterates quickly to deliver results that matter to your business."}
-                  </p>
-                </div>
+          <div className="flex flex-wrap lg:flex-nowrap justify-center lg:ml-10 lg:px-10 w-[90%] gap-10 items-center lg:items-start">
+            <div className="flex flex-col relative items-center">
+              <span className="mb-4 w-[2px] h-12 bg-gradient-225 hidden lg:block"></span>
+              <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full max-w-md">
+                <h1 className="text-lg text-gray-900 font-bold">
+                  <span className="text-gradient">#2</span> Sprint planning
+                </h1>
+                <p className="text-gray-600 text-sm">
+                  Sprint roadmap is a collective planning effort. Team members
+                  collaborate to clarify items and ensure shared understanding.
+                </p>
               </div>
-            ))}
+            </div>
+
+            <div className="flex flex-col relative items-center">
+              <span className="mb-4 w-[2px] h-12 bg-gradient-225 hidden lg:block"></span>
+              <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full max-w-md">
+                <h1 className="text-lg text-gray-900 font-bold">
+                  <span className="text-gradient">#4</span> Standups & weekly
+                  demos
+                </h1>
+                <p className="text-gray-600 text-sm">
+                  Standups, weekly demos, and weekly reviews make sure everyone
+                  is on the same page and can raise their concerns.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col relative items-center">
+              <span className="mb-4 w-[2px] h-12 bg-gradient-225 hidden lg:block"></span>
+              <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full max-w-md">
+                <h1 className="text-lg text-gray-900 font-bold">
+                  <span className="text-gradient">#6</span> Iterative delivery
+                </h1>
+                <p className="text-gray-600 text-sm">
+                  We divide the implementation process into several checkpoints
+                  rather than a single deadline.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+   {/* ✅ MOBILE/TABLET VERSION (up to md) */}
+<div className="lg:hidden flex flex-col items-center justify-center w-full px-4 gap-6">
+
+{/* Row 1: #1 + #2 */}
+<div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
+  {/* #1 */}
+  <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full sm:w-1/2 max-w-md">
+    <h1 className="text-lg text-gray-900 font-bold">
+      <span className="text-gradient">#1</span> Assemble the right team
+    </h1>
+    <p className="text-gray-600 text-sm">
+      We handle all aspects of vetting and choosing the right team that you don't have the time, expertise, or desire to do.
+    </p>
+  </div>
+
+  {/* #2 */}
+  <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full sm:w-1/2 max-w-md">
+    <h1 className="text-lg text-gray-900 font-bold">
+      <span className="text-gradient">#2</span> Sprint planning
+    </h1>
+    <p className="text-gray-600 text-sm">
+      Sprint roadmap is a collective planning effort. Team members collaborate to clarify items and ensure shared understanding.
+    </p>
+  </div>
+</div>
+
+{/* Row 2: #3 + #4 */}
+<div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
+  {/* #3 */}
+  <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full sm:w-1/2 max-w-md">
+    <h1 className="text-lg text-gray-900 font-bold">
+      <span className="text-gradient">#3</span> Tech architecture goals
+    </h1>
+    <p className="text-gray-600 text-sm">
+      We break monolithic apps into microservices. Decoupling the code allows teams to move faster and more independently.
+    </p>
+  </div>
+
+  {/* #4 */}
+  <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full sm:w-1/2 max-w-md">
+    <h1 className="text-lg text-gray-900 font-bold">
+      <span className="text-gradient">#4</span> Standups & weekly demos
+    </h1>
+    <p className="text-gray-600 text-sm">
+      Standups, weekly demos, and weekly reviews make sure everyone is on the same page and can raise their concerns.
+    </p>
+  </div>
+</div>
+
+{/* Row 3: #5 + #6 */}
+<div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
+  {/* #5 */}
+  <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full sm:w-1/2 max-w-md">
+    <h1 className="text-lg text-gray-900 font-bold">
+      <span className="text-gradient">#5</span> Code reviews
+    </h1>
+    <p className="text-gray-600 text-sm">
+      Code reviews before release help detect issues like memory leaks, file leaks, performance signs, and general bad smells.
+    </p>
+  </div>
+
+  {/* #6 */}
+  <div className="flex flex-col border h-[150px] justify-center p-6 rounded-lg w-full sm:w-1/2 max-w-md">
+    <h1 className="text-lg text-gray-900 font-bold">
+      <span className="text-gradient">#6</span> Iterative delivery
+    </h1>
+    <p className="text-gray-600 text-sm">
+      We divide the implementation process into several checkpoints rather than a single deadline.
+    </p>
+  </div>
+</div>
+</div>
+
     </div>
   );
 }

@@ -4,8 +4,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white shadow-md px-4 sm:px-10 py-4 fixed top-0 left-0 z-50">
-      <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
+    <nav className="w-full bg-white shadow-md px-4 sm:px-10 py-4 z-50 fixed top-0 left-0 z-50">
+      <div className="flex flex-wrap items-center justify-between mx-auto">
           <img src="/images/Logo.png" alt="Logo" className="h-14" />
         <button
           type="button"
@@ -39,7 +39,7 @@ export default function Navbar() {
               <li key={item}>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-700 font-medium hover:text-blue-600"
+                  className="block py-2 px-3 text-gray-700 font-medium hover:text-gradient"
                 >
                   {item}
                 </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
 
         {/* Contact Us Button visible only on desktop (outside menu) */}
         <div className="hidden lg:flex">
-          <button className="ml-4 bg-gradient-225 text-white font-semibold px-5 py-2 rounded-md">
+          <button className="ml-4 bg-gradient-225 hover:shadow-lg text-white font-semibold px-5 py-2 rounded-md">
             Contact Us
           </button>
         </div>

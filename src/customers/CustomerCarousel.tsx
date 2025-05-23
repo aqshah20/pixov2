@@ -137,7 +137,7 @@ export function CustomerCarousel() {
   ];
 
   return (
-    <div className="mt-28 w-full overflow-hidden flex flex-col items-center relative">
+    <div className="md:mt-28 mt-10 w-full overflow-hidden flex flex-col items-center relative">
       <div className="embla w-full">
         <div className="embla__viewport relative" ref={emblaRef2}>
           <div className="embla__container">
@@ -173,7 +173,7 @@ export function CustomerCarousel() {
       </div>
       <div className="embla w-4/5">
         <div className="embla__viewport relative" ref={emblaRef}>
-          <div className="embla__container  mb-14">
+          <div className="embla__container md:mb-14">
             {slides.map((_, index) => (
               <div
                 className={`embla__slide customer__slide h-[230px] ${
@@ -198,15 +198,15 @@ export function CustomerCarousel() {
                   </div>
                   <div className="flex flex-col items-center">
                     <h6
-                      className={`text-lg ${
+                      className={`text-sm lg:text-lg mt-1 ${
                         selectedIndex !== index
                           ? "text-gray-500"
                           : "text-purple font-bold"
-                      } text-lg`}
+                      }`}
                     >
-                      {slides[index].title}
+                      Romeena De Silva
                     </h6>
-                    <p className="text-gray-700">{slides[index].subtitle}</p>
+                    <p className="text-gray-700 text-xs lg:text-base">CEO, SCFC Canada</p>
                   </div>
                 </div>
               </div>
@@ -222,7 +222,7 @@ export function CustomerCarousel() {
             emblaApi?.scrollPrev();
           }}
           disabled={!canScrollPrev}
-          className={`p-2 rounded-full z-50  border border-purple cursor-pointer absolute top-[200px] left-10 -translate-y-1/2`}
+          className={`p-2 rounded-full z-40  border border-purple cursor-pointer absolute top-[200px] left-10 -translate-y-1/2`}
         >
           <ArrowLeft className={"text-purple size-3 md:size-5"} />
         </button>
@@ -232,7 +232,7 @@ export function CustomerCarousel() {
             emblaApi?.scrollNext();
           }}
           disabled={!canScrollNext}
-          className={`p-2 rounded-full z-50  border border-purple cursor-pointer absolute top-[200px] right-10 -translate-y-1/2`}
+          className={`p-2 rounded-full z-40  border border-purple cursor-pointer absolute top-[200px] right-10 -translate-y-1/2`}
         >
           <ArrowRight className={"text-purple size-3 md:size-5"} />
         </button>

@@ -1,7 +1,7 @@
 function HireCta() {
     return (
       <div className="w-full flex justify-center items-center my-10 px-4">
-        <div className="w-full md:w-4/5 bg-lightBlue rounded-xl flex flex-col md:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-10 md:py-20 gap-6">
+        <div className="w-full md:w-4/5 bg-lightBlue rounded-xl flex flex-col md:flex-row items-center justify-between px-6 sm:px-10 md:px-16 py-16 sm:py-20 gap-6">
           <h4 className="font-bold text-2xl sm:text-3xl lg:text-4xl text-center md:text-left md:w-4/5 lg:w-3/5 text-gray-900">
             Hire the best developers and designers around!
           </h4>

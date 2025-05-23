@@ -1,6 +1,6 @@
 function Teams() {
   return (
-    <div className="my-10 px-10 space-y-5">
+    <div className="md:my-10 px-10 space-y-5">
       <div className="mb-10 md:mb-20 w-full flex justify-center relative">
         <div className="inline-flex relative gap-2 mt-16 flex-col items-center p-5">
           <span className="w-16 h-1 bg-gradient-225 absolute top-0 left-1/2 -translate-x-1/2"></span>

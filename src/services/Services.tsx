@@ -2,8 +2,8 @@ import { ServiceCarousel } from "./ServiceCarousel";
 
 function Services() {
   return (
-    <div>
-      <h4 className="text-2xl my-8 text-center md:text-4xl font-bold">
+    <div className="mt-20">
+      <h4 className="text-2xl md:my-8 text-center md:text-4xl font-bold">
         Services We Offer
       </h4>
       <ServiceCarousel />

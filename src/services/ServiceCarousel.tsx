@@ -6,32 +6,38 @@ const slides = [
     title: "Web Design & Development",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      icon: "/images/Code.png",
   },
   {
     title: "Mobile App Development",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+    icon: "/images/Mobile.png",
   },
   {
-    title: "Custom Software Development",
+    title: "Software Testing Service",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+    icon: "/images/Card.png",
   },
   {
     title: "UI/UX Design",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+    icon: "/images/Code.png",
   },
   {
     title: "Digital Marketing",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+    icon: "/images/Mobile.png",
   },
   {
     title: "Data Science & Analytics",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
+    icon: "/images/Card.png",
+  },  
 ];
 
 export function ServiceCarousel() {
@@ -68,7 +74,7 @@ export function ServiceCarousel() {
     <div className="embla">
       <div className="embla__viewport relative" ref={emblaRef}>
         <div className="embla__container h-[300px] mb-14">
-          {slides.map((_, index) => (
+          {slides.map((slide, index) => (
             <div className="embla__slide service__slide" key={index}>
               <div
                 className={` p-4 flex flex-col gap-5 items-start justify-center min-h-[280px] transition-all duration-300 rounded-lg
@@ -79,7 +85,7 @@ export function ServiceCarousel() {
                   }`}
               >
                 <div className="border inline-block rounded-full border-purple p-2">
-                  <img src="/images/Code.png" alt="" className="h-6" />
+                  <img src={slide.icon} alt="" className="h-6" />
                 </div>
                 <h6
                   className={`${
@@ -108,7 +114,7 @@ export function ServiceCarousel() {
             ))}
           </div>
         )}
-        <div className="flex items-center absolute right-20 bottom-0 gap-2 w-[120px]">
+        <div className="md:flex hidden items-center absolute right-20 bottom-0 gap-2 w-[120px]">
           {/* Current Slide Number */}
           <span className="text-gray-400 font-medium text-xs leading-none">
             {String(selectedIndex + 1).padStart(2, "0")}

@@ -40,7 +40,7 @@ export function MeetCarousel() {
           {/* Slide 1 */}
           <div className="embla__slide meet__slide">
             <div className="!w-full h-[230px]">
-              <div className="py-14 mx-14 relative">
+              <div className="py-14 mx-4 md:mx-14 relative">
                 <span className="w-20 h-1 bg-gradient-225 absolute top-0 left-0"></span>
                 <h4 className="text-2xl md:text-4xl text-gray-900">Meet the People</h4>
                 <h4 className="text-2xl md:text-4xl text-gray-900 font-bold">
@@ -53,7 +53,7 @@ export function MeetCarousel() {
           {/* Slide 2 */}
           <div className="embla__slide meet__slide">
             <div className="!w-full h-[230px]">
-              <div className="py-14 mx-14 relative">
+              <div className="py-14 mx-4 md:mx-14 relative">
                 <span className="w-20 h-1 bg-gradient-225 absolute top-0 left-0"></span>
                 <h4 className="text-2xl md:text-4xl text-gray-900">Meet the Developers</h4>
                 <h4 className="text-2xl md:text-4xl text-gray-900 font-bold">
@@ -66,7 +66,7 @@ export function MeetCarousel() {
           {/* Slide 3 */}
           <div className="embla__slide meet__slide">
             <div className="!w-full h-[230px]">
-              <div className="py-14 mx-14 relative">
+              <div className="py-14 mx-4 md:mx-14 relative">
                 <span className="w-20 h-1 bg-gradient-225 absolute top-0 left-0"></span>
                 <h4 className="text-2xl md:text-4xl text-gray-900">Leadership Team</h4>
                 <h4 className="text-2xl md:text-4xl text-gray-900 font-bold">
